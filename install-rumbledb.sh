@@ -3,7 +3,7 @@
 # Script provided by https://github.com/fkellner, Thank you!
 
 INSTALL_PATH=$HOME/RumbleDB
-APACHE_SPARK_RELEASE=3.5.5
+APACHE_SPARK_RELEASE=3.5.6
 HADOOP_RELEASE=3
 SCALA_RELEASE=2.13
 RUMBLEDB_VERSION=1.22.0
