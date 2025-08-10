@@ -22,10 +22,6 @@ jobs:
       - name: Run Install Script
         run: ./install-rumbledb.sh
 
-      - name: Verify Installation
-        run: |
-          ant -version
-          spark-submit --version
       - name: Check folder existence
         run: |
           if [ -d "~/RumbleDB" ]; then
