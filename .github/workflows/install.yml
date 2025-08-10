@@ -24,7 +24,7 @@ jobs:
 
       - name: Check folder existence
         run: |
-          if [ -d "~/RumbleDB" ]; then
+          if [ -d "./RumbleDB" ]; then
             echo "Folder exists"
           else
             echo "Folder does not exist"
