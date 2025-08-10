@@ -46,8 +46,7 @@ cd "$INSTALL_PATH" || {
 }
 
 echo "########## Downloading Apache Spark"
-# Adjusted filename to match typical Spark naming format
-SPARK_FILENAME="spark-$APACHE_SPARK_RELEASE-bin-hadoop$HADOOP_RELEASE-scala-$SCALA_RELEASE.tgz"
+SPARK_FILENAME="spark-$APACHE_SPARK_RELEASE-bin-hadoop$HADOOP_RELEASE-scala$SCALA_RELEASE.tgz"
 SPARK_URL="$SPARK_BASE_URL/spark-$APACHE_SPARK_RELEASE/$SPARK_FILENAME"
 
 attempt=0
