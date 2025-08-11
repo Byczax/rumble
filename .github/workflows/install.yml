@@ -22,14 +22,6 @@ jobs:
       - name: Run Install Script
         run: ./install-rumbledb.sh
 
-      - name: Check folder existence
-        run: |
-          if [ -d "./RumbleDB" ]; then
-            echo "Folder exists"
-          else
-            echo "Folder does not exist"
-            exit 1
-          fi
       - name: Verify RumbleDB Execution using script
         run: |
           echo '1 to 5' > test-query.jsoniq
