@@ -24,6 +24,7 @@ jobs:
 
       - name: Verify RumbleDB REPL script exists 
         run: |
+          export PATH="$PATH:$HOME/RumbleDB/scripts"
           if ! command -v rumble-repl; then
             echo "rumble-repl not found in PATH"
             exit 1
