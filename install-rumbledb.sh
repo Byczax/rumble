@@ -25,6 +25,9 @@ if [ "$1" == "--help" ]; then
   exit 0
 fi
 
+command -v wget >/dev/null 2>&1 || { echo "wget not found"; exit 1; }
+command -v gpg >/dev/null 2>&1 || echo "WARNING: gpg not found — skipping verification"
+
 echo "######### Checking if Java $JAVA_VERSION is installed"
 if command -v java >/dev/null 2>&1; then
   JAVA_FOUND=$(java -version 2>&1 | awk -F '"' '/version/ {print $2}')
@@ -121,5 +124,5 @@ if ! grep -q "$INSTALL_PATH/scripts" ~/.bashrc; then
   echo "export PATH=\"\$PATH:$INSTALL_PATH/scripts\"" >>~/.bashrc
 fi
 
-echo "########## Done. Reloading ~/.bashrc and showing help output of scripts"
-source ~/.bashrc
+echo "########## Done. To use RumbleDB, restart your shell or run:"
+echo "    export PATH=\"\$PATH:$INSTALL_PATH/scripts\""
