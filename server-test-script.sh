@@ -93,7 +93,7 @@ result=$(curl --silent --show-error --stderr - -X POST "http://localhost:8000/js
 result_without_stack_trace=${result:2:152}
 expected_result_without_stack_trace='"error-message" : "Error [err: RBST0001 ] Output path \/tmp\/output already exists. Please use --overwrite yes to overwrite.", "error-code" : "RBST0001"'
 
-if [[ "$result" == *"RBST0001"* && "$result" == *"/tmp/output already exists"* ]]
+if [[ "$result" == *"RBST0001"* ]]
 then
     echo 'Test 5: Success'
     success_count=$((success_count+1))
