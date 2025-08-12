@@ -1,4 +1,6 @@
-ls -l
+ls -la
+echo "### Target ###"
+ls -la target
 # start server as a background process
 spark-submit target/spark-rumble-*-jar-with-dependencies.jar --server yes --port 8000 &
 echo "Starting the Rumble server"
